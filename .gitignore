@@ -30,3 +30,5 @@
 *.exe
 *.out
 *.app
+
+factory/example1/build/*
