@@ -32,3 +32,4 @@
 *.app
 
 factory/example1/build/*
+factory/example2/build/*
