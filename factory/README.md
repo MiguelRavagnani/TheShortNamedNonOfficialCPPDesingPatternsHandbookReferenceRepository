@@ -37,4 +37,6 @@ make
 
 ## References
 
-[refactoring.guru](refactoring.guru/design-patterns/factory-method)
+[refactoring.guru](https://refactoring.guru/design-patterns/factory-method)
+
+[Mike Shah](https://youtube.com/watch?v=vAmDQKeC99g&ab_channel=MikeShah)
