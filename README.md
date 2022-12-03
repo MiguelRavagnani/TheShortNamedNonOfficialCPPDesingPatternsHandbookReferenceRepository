@@ -1,8 +1,19 @@
 # TheShortNamedNonOfficialCPPDesingPatternsHandbookReferenceRepository
-I'm tired of going back and forth on thousands of Stack Overflow and forum threads to look for design pattern references, so this is just my dump of design pattern snippets. Also not so fond of snippets.
+I'm tired of going back and forth on thousands of Stack Overflow and forum threads to look for design pattern references, so this is just a dump of design pattern snippets. Also not so fond of snippets.
+
+Much of the code here comes from different sources, so I'll be listing all of my sources. If you happen to come across this "notebook" of a repository, I recommend you hop into the references. There, you will find a more in-depth look 
+on all of the code.
 
 This is a dump, so It probably won't be much organized. But I'm also weird, so It probably will.
 
 ## Currently documented examples
 
  - factory/example1
+ - factory/example2
+ - factory/example3
+
+ ## References
+
+[refactoring.guru](https://refactoring.guru/design-patterns/factory-method)
+
+[Mike Shah](https://youtube.com/watch?v=vAmDQKeC99g&ab_channel=MikeShah)

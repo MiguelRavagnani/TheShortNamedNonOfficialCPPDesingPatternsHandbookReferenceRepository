@@ -13,6 +13,7 @@ Great if you are afraid of "new"
 
  - Example 1 - Really basic, client-creator like 
  - Example 2 - Way more complex, with some extened functions. TRIGGER WARNING: *singleton*
+ - Example 3 - Just like 2, but *E X T E N S I B L E*. TRIGGER WARNING: *still has singletons*
 
 ## Building
 
@@ -37,6 +38,6 @@ make
 
 ## References
 
-[refactoring.guru](https://refactoring.guru/design-patterns/factory-method)
+[refactoring.guru](https://refactoring.guru/design-patterns/factory-method) (Example 1)
 
-[Mike Shah](https://youtube.com/watch?v=vAmDQKeC99g&ab_channel=MikeShah)
+[Mike Shah](https://youtube.com/watch?v=vAmDQKeC99g&ab_channel=MikeShah) (Examples 2 and 3)

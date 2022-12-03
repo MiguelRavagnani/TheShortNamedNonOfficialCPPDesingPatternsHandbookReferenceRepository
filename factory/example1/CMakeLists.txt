@@ -9,7 +9,5 @@ project(factory_example1)
 
 set(INCLUDE_DIRS "${CMAKE_SOURCE_DIR}")
 
-set(INCLUDE_DIRS "${CMAKE_SOURCE_DIR}")
-
 add_executable ( factory_example1 main.cpp )
 target_include_directories ( factory_example1 PRIVATE ${INCLUDE_DIRS} )

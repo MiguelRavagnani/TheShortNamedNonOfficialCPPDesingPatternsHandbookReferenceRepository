@@ -1,0 +1,8 @@
+plane
+boat
+boat
+plane
+car
+car
+plane
+boat
