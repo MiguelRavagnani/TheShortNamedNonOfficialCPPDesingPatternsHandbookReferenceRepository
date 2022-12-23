@@ -11,9 +11,13 @@ This is a dump, so It probably won't be much organized. But I'm also weird, so I
  - factory/example1
  - factory/example2
  - factory/example3
+ - decorator/example1
+ - decorator/example2
 
  ## References
 
 [refactoring.guru](https://refactoring.guru/design-patterns/factory-method)
 
 [Mike Shah](https://youtube.com/watch?v=vAmDQKeC99g&ab_channel=MikeShah)
+
+[iavr, on Code review Stack Change](https://codereview.stackexchange.com/questions/47083/compile-time-decorator-pattern-in-c-with-templates)

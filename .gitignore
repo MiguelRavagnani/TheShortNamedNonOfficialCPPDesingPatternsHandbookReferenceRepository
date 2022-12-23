@@ -34,5 +34,7 @@
 factory/example1/build/*
 factory/example2/build/*
 factory/example3/build/*
+decorator/example1/build/*
+decorator/example2/build/*
 
 .vscode/*
