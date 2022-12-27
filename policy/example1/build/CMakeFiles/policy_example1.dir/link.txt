@@ -1,1 +1,0 @@
-/usr/bin/c++ CMakeFiles/policy_example1.dir/main.cpp.o -o policy_example1 
