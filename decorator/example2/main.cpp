@@ -16,16 +16,12 @@ struct AbstractComponent
 
 /* ----------------------------------------------------------------------------------------------------- */
 
-struct MessageData { std::string& m_message; };
-
-/* ----------------------------------------------------------------------------------------------------- */
-
 class Component: public virtual AbstractComponent{
 public:
 
     Component() : AbstractComponent(){;}
 
-    virtual void Format(MessageData param_message)=0;
+    virtual void Format(std::string& param_message)=0;
 
 };
 
@@ -36,7 +32,7 @@ public:
 
     DefaultComponent() : Component(){;}
 
-    virtual void Format(MessageData param_message) {}
+    virtual void Format(std::string& param_message) {}
 
 };
 
@@ -68,8 +64,8 @@ public:
 
     virtual ~ConcreteDecorator_A(){}
 
-    virtual void Format(MessageData param_message){
-        param_message.m_message = "[decorator_a] " + param_message.m_message;
+    virtual void Format(std::string& param_message){
+        param_message = "[decorator_a] " + param_message;
         this->m_component.Format(param_message);
     }
 
@@ -86,40 +82,12 @@ public:
 
     virtual ~ConcreteDecorator_B(){}
 
-    virtual void Format(MessageData param_message){
-        param_message.m_message = "[decorator_b] " + param_message.m_message;
+    virtual void Format(std::string& param_message){
+        param_message = "[decorator_b] " + param_message;
         this->m_component.Format(param_message);
     }
 
 };
-
-/* ----------------------------------------------------------------------------------------------------- */
-
-template<typename Comp>
-std::shared_ptr<Component> InitializeAnyComponent(
-        std::string param_format, Comp m_component){
-
-
-
-    std::shared_ptr<Component> result_scorer;
-    if (/* Choose formatter param_format */ true){
-        result_scorer = std::shared_ptr<ConcreteDecorator_B<Comp>>(
-                 new ConcreteDecorator_B<Comp>(
-                         m_component
-                 )
-             );
-    }else{
-        result_scorer = std::shared_ptr<ConcreteDecorator_A<ConcreteDecorator_B<Comp>>>(
-                new ConcreteDecorator_A<ConcreteDecorator_B<Comp>>(
-                    ConcreteDecorator_B<Comp>(
-                            m_component
-                )
-            )
-        );
-    }
-
-    return result_scorer;
-}
 
 /* ----------------------------------------------------------------------------------------------------- */
 
@@ -159,19 +127,30 @@ decorate(A&& a)
 
 /* ----------------------------------------------------------------------------------------------------- */
 
+template <template <typename> class E, typename A>
+std::shared_ptr <result<decorate_impl<E>(A)>>
+decorate(A&& a)
+{
+	return std::make_shared <result<decorate_impl<E>(A)>>
+		(decorate_impl<E>()(std::forward<A>(a)));
+}
+
+/* ----------------------------------------------------------------------------------------------------- */
+
 int main ()
 {
 	DefaultComponent component;
-	std::shared_ptr<Component> ptr =
-		decorate<ConcreteDecorator_A, ConcreteDecorator_B>(component);
+    
+	auto ptr_1 = decorate<ConcreteDecorator_A>(component);
 
-    std::string raw_message = "raw";
-    std::cout << raw_message << std::endl;
+	auto temp = decorate<ConcreteDecorator_B>(*ptr_1);
 
-    MessageData message_buffer = {raw_message};
+    std::string raw_message_1 = "raw_1";
+    
+    std::cout << raw_message_1 << std::endl;
 
-    ptr->Format(message_buffer);
+    ptr_1->Format(raw_message_1);
 
-    std::cout << raw_message << std::endl;
+    std::cout << raw_message_1 << std::endl;
 
 }

@@ -9,7 +9,7 @@ Simple in concept, not that simple in execution - but I love it. A decorator pat
 
 ## Building
 
-Make sure you are in this example root directory (TheShortNamedNonOfficialCPPDesingPatternsHandbookReferenceRepository/factory)
+Make sure you are in this example root directory (TheShortNamedNonOfficialCPPDesingPatternsHandbookReferenceRepository/decorator)
 
 Navigate to the desired example
 
