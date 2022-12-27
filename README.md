@@ -13,6 +13,7 @@ This is a dump, so It probably won't be much organized. But I'm also weird, so I
  - factory/example3
  - decorator/example1
  - decorator/example2
+ - policy/example1
 
  ## References
 

@@ -36,5 +36,6 @@ factory/example2/build/*
 factory/example3/build/*
 decorator/example1/build/*
 decorator/example2/build/*
+policy/example1/build/*
 
 .vscode/*
